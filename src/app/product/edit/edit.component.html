@@ -1,0 +1,101 @@
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center" style="background-color: #f1f1f1; padding: 10px;">Product</h2>
+        <!-- <form #productForm="ngForm" class="row py-3" (ngSubmit)="getValue(productForm.value)"> -->
+            <form #productForm="ngForm" class="row py-3"(ngSubmit)="addValue(productForm.value)">
+          <div class="col-md-6 py-3">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter product name" ngModel name="name">
+          </div>
+          <!-- product title -->
+          <!-- <div class="col-md-6 py-3">
+            <label for="title">Product title</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter product title">
+          </div> -->
+          <div class="col-md-6 py-3">
+            <label for="category">Category</label>
+            <select id="category" class="form-control" ngModel name="category">
+              <option selected value ="none" >None</option>
+              <option value="convenience" >convenience goods</option>
+              <option value="shopping" >shopping goods</option>
+              <option value="specialty" >specialty goods</option>
+              <option value="unsought" >unsought goods</option>
+            </select>
+          </div>
+          <!-- Price -->
+       <!--    <div class="col-md-6 py-3">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" placeholder="Enter product price">
+          </div> -->
+  
+          <div class="col-md-6 py-3">
+            <label for="price">Size</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">small</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">medium</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">large</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">extra large</label>
+            </div>
+          </div>
+          <div class="col-md-6 py-3">
+            <label for="price">Color</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                White
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Black
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Red
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                Blue
+              </label>
+            </div>
+          </div>
+          <!-- Description -->
+         <!--  <div class="col-md-6 py-3">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+          </div> -->
+          <!-- Upload image -->
+         <!--  <div class="col-md-6 py-3">
+            <label for="image">Upload image</label><br>
+            <input type="file" class="form-control-file" id="image">
+          </div> -->
+  
+          <div class="col-md-12  py-3">
+            <button type="submit" class="btn btn-primary form-control btn-lg" routerLink="product">Submit</button>
+          </div>
+  
+  
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+   

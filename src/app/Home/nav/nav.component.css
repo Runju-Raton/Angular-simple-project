@@ -1,0 +1,18 @@
+.navbar-brand{
+    font-size: 28px;
+    margin-left: 50px;
+}
+.nav-link{
+    font-size: 22px;
+    color: #000 !important;
+}
+.nav-link:hover{
+    color: #fff !important;
+}
+.nav-item{
+    padding: 10px 20px;
+}
+.navbar-nav{
+    margin-left: auto !important;
+   
+} 
