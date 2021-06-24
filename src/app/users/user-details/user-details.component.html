@@ -1,0 +1,78 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+               <tr>
+                   <th colspan="5"> <h2 class="display-block p-3" style="background-color: #FF616D; color: #fff; width: 100%;">{{ user.name }} Details </h2></th>
+               </tr>
+                  
+                       
+                  
+                <tbody>
+                   <tr>
+                       <th style="width: 25%;">Id</th>
+                       <td colspan="3" class="text-left">{{ user.id }}</td>
+                       <td rowspan="5" class="text-center"><img style="width: 300px; height:300px;" src="https://image.kpopmap.com/2017/09/HanYeSul-min.jpg" alt=""></td>
+                   </tr>
+                   <tr>
+                    <th style="width: 25%;">Name</th>
+                    <td colspan="3" class="text-left">{{ user.name }}</td>
+                </tr>
+                <tr>
+                    <th style="width: 25%;">Email</th>
+                    <td colspan="3" class="text-left">{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <th style="width: 25%;">Phone</th>
+                    <td colspan="3" class="text-left">{{ user.phone }}</td>
+                </tr>
+                <tr>
+                    <th style="width: 25%;">Portfolio</th>
+                    <td colspan="3" class="text-left">{{ user.website }}</td>
+                </tr>
+                
+               
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="col-md-6">
+            <nav ngbNav class="nav-tabs" #nav="ngbNav">
+                <ng-container ngbNavItem><a routerLink='address'   ngbNavLink >Address</a>
+                    <ng-template ngbNavContent>
+                        <table class="table table-bordered">
+                           <tbody>
+                            <tr><td>street</td> <td>{{ user.address.street }}</td></tr>
+                            <tr><td>suite</td> <td>{{ user.address.suite }}</td></tr>
+                            <tr><td>city</td> <td>{{ user.address.city }}</td></tr>
+                            <tr><td>zipcode</td> <td>{{ user.address.zipcode }}</td></tr>
+                            <tr><td>geo-location&nbsp;</td> <td>latitude: {{ user.address.geo.lat }}, longititude: {{ user.address.geo.lng }} </td></tr>
+                        </tbody>
+                        </table>
+                      </ng-template>
+                </ng-container>
+                <ng-container ngbNavItem><a routerLink='company' ngbNavLink>Company</a>
+                    <ng-template ngbNavContent>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>{{user.company.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>catchPhrase</td>
+                                    <td>{{ user.company.catchPhrase }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Business</td>
+                                    <td>{{ user.company.bs }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      </ng-template></ng-container>
+            </nav>
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+        </div>
+       
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12" *ngIf="users.length>0; else elseBlock">
+            <div class="card">
+                <div class="card-head p-3" style="background-color: #FF616D; color: #fff;">
+                    <h2 class="text-center">User List</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Id</td>
+                                <td>Name</td>
+                                <td>User Name</td>
+                                <td>Email</td>
+                                <td>Phone</td>
+                                <td>Details</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let user of users">
+                                <td><a [routerLink]="['/users',user.id]">{{ user.id }}</a></td>
+                                <td>{{ user.name }}</td>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>{{ user.phone }}</td>
+                                <td><button [routerLink]="['/users',user.id]" class="btn btn-success">See more</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <ng-template #elseBlock>
+            <h2 class="text-center">{{ errorMessage }}</h2>
+        </ng-template>
+      
+    </div>
+</div>
+
+
+<h2></h2>
+

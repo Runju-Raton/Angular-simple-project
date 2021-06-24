@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* #81B214 */
+hr{
+    color: red;
+    height: 2px;
+    width: 100%;
+    position: relative;
+    border: 2px solid;
+}
+hr::after{
+    content: "";
+    position: absolute;
+    left: center;
+    right: center;
+    top: center;
+    bottom: center;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:red;
+    text-align: center;
+}
+span{
+    color: #D83A56; 
+}

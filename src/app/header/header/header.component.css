@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+
+header{
+    height: 200px;
+    background: url('../../../assets/images/header.jpg') no-repeat center/cover;
+}
+
+.title{
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+    padding: 50px;
+}

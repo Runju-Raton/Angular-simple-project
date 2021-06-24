@@ -1,13 +1,23 @@
 .navbar-brand{
     font-size: 28px;
     margin-left: 50px;
+    transition: .5s;
+    color: #fff;
+}
+.navbar-brand:hover{
+    color: #66DE93 !important;
+    
+}
+.navbar-brand span:hover{
+    color: #66DE93 !important;
 }
 .nav-link{
     font-size: 22px;
-    color: #000 !important;
+    color: #fff !important;
+    transition: .5s;
 }
 .nav-link:hover{
-    color: #fff !important;
+    color: #66DE93 !important;
 }
 .nav-item{
     padding: 10px 20px;
